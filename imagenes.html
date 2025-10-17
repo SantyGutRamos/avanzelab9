@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Galería de Imágenes</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0; padding: 20px;
+        }
+        .galeria {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+            gap: 20px;
+            box-sizing: border-box;
+        }
+        .imagen {
+            padding: 10px;
+            border: 3px solid #2a9d8f;
+            border-radius: 10px;
+            box-sizing: border-box;
+            background-color: white;
+            overflow: hidden;
+            box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+            transition: transform 0.3s ease;
+        }
+        .imagen img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 8px;
+        }
+        .imagen:hover {
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Galería Responsive</h1>
+    <div class="galeria">
+        <div class="imagen"><img src="https://via.placeholder.com/300x200?text=Imagen+1" alt="Imagen 1"></div>
+        <div class="imagen"><img src="https://via.placeholder.com/300x200?text=Imagen+2" alt="Imagen 2"></div>
+        <div class="imagen"><img src="https://via.placeholder.com/300x200?text=Imagen+3" alt="Imagen 3"></div>
+        <div class="imagen"><img src="https://via.placeholder.com/300x200?text=Imagen+4" alt="Imagen 4"></div>
+        <div class="imagen"><img src="https://via.placeholder.com/300x200?text=Imagen+5" alt="Imagen 5"></div>
+        <div class="imagen"><img src="https://via.placeholder.com/300x200?text=Imagen+6" alt="Imagen 6"></div>
+    </div>
+</body>
+</html>

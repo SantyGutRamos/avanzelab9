@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Box Model</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f7fa;
+            margin: 0; padding: 20px;
+        }
+        .contenedor {
+            display: flex;
+            justify-content: space-around;
+            gap: 20px;
+            flex-wrap: wrap;
+        }
+        .tarjeta {
+            width: 220px;
+            padding: 20px;
+            margin: 10px;
+            border: 3px solid #2a9d8f;
+            box-sizing: border-box;
+            background-color: white;
+            border-radius: 12px;
+            box-shadow: 0 4px 6px rgb(0 0 0 / 0.1);
+            text-align: center;
+        }
+        .tarjeta h3 {
+            margin-top: 0;
+            color: #2a9d8f;
+        }
+    </style>
+</head>
+<body>
+    <h1 style="text-align:center;">Modelo de Caja con Flexbox</h1>
+    <div class="contenedor">
+        <div class="tarjeta">
+            <h3>Tarjeta 1</h3>
+            <p>Esta tarjeta tiene margen, borde y padding.</p>
+        </div>
+        <div class="tarjeta">
+            <h3>Tarjeta 2</h3>
+            <p>Modelo de caja aplicado y flexbox para alinear.</p>
+        </div>
+        <div class="tarjeta">
+            <h3>Tarjeta 3</h3>
+            <p>Espaciado entre tarjetas con margen.</p>
+        </div>
+    </div>
+</body>
+</html>
