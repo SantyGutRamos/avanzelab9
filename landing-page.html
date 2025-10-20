@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Landing Page Simple</title>
+    <link rel="stylesheet" href="styles.css"> 
+    <style>
+        /* 8. LANDING PAGE - CSS Específico */
+
+        /* 1. ESTRUCTURA GLOBAL CON CSS GRID */
+        .landing-layout {
+            display: grid;
+            /* Definición de filas: header (auto), hero (400px fijo), main (resto), footer (auto) */
+            grid-template-rows: auto 400px 1fr auto; 
+            grid-template-areas: 
+                "header"
+                "hero"
+                "main"
+                "footer";
+            min-height: 100vh;
+        }
+
+        /* 2. MODELO DE CAJAS Y ESTILO PARA HEADER */
+        .landing-header {
+            grid-area: header;
+            background-color: #16a085;
+            color: white;
+            /* Padding interno */
+            padding: 20px; 
+            text-align: center;
+            /* Margen externo e Borde */
+            margin-bottom: 5px; 
+            border-bottom: 3px solid #1abc9c;
+        }
+        
+        .landing-hero {
+            grid-area: hero;
+            background-color: #3498db;
+            color: white;
+            
+            display: flex; 
+            flex-direction: column; 
+            justify-content: center; 
+            align-items: center; 
+        }
+
+        .hero-content {
+         
+            padding: 40px; 
+            border: 5px solid white;
+            border-radius: 10px; 
+            text-align: center;
+        }
+
+        .hero-button {
+            background-color: #e67e22;
+            color: white;
+            /* Padding interno */
+            padding: 15px 30px; 
+            text-decoration: none;
+            border-radius: 5px;
+            font-weight: bold;
+            /* Margen externo */
+            margin-top: 20px; 
+            display: inline-block;
+        }
+
+        .landing-main {
+            grid-area: main;
+       
+            padding: 40px;
+        
+            margin: 20px; 
+            background-color: white;
+            border: 1px solid #ddd;
+        }
+        .landing-footer {
+            grid-area: footer;
+            background-color: #333;
+            color: white;
+            text-align: center;
+          
+            padding: 15px;
+        }
+    </style>
+</head>
+<body>
+    <div class="landing-layout">
+        
+        <header class="landing-header">
+            <h2>Landing Page Simple (CSS Grid)</h2>
+            <a href="index.html" style="color: #ffcc00; font-size: 1em;">← Volver al índice</a>
+        </header>
+        
+        <section class="landing-hero">
+            <div class="hero-content">
+                <h1>Tu Próximo Proyecto Empieza Aquí</h1>
+                <p>Aprovecha esta oportunidad única y transforma tu negocio.</p>
+                <a href="#" class="hero-button">¡Regístrate Ahora!</a>
+            </div>
+        </section>
+        
+        <main class="landing-main">
+            <h3>Sección de Contenido Principal</h3>
+            <p>Usamos **CSS Grid** para la estructura principal y **Flexbox** para centrar el contenido en la sección Hero.</p>
+            <p>Cada sección usa el **Modelo de Cajas** (padding interno, márgenes externos y bordes) para delimitar y estilizar los contenedores.</p>
+        </main>
+        
+        <footer class="landing-footer">
+            &copy; 2025 Landing Page Demo. Todos los derechos reservados.
+        </footer>
+    </div>
+</body>
+</html>

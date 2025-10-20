@@ -1,0 +1,238 @@
+/* GENERAL STYLES - Aplicables a todos los diseños */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f9;
+}
+
+header {
+    background-color: #333;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+header a {
+    color: #ffcc00;
+    text-decoration: none;
+    font-size: 0.9em;
+}
+
+/* 4. BOX MODEL (FLEXBOX) */
+.card-container {
+    display: flex;
+    justify-content: space-around; /* Distribuye las tarjetas uniformemente */
+    align-items: flex-start;
+    padding: 20px;
+    background-color: #e0e0e0;
+    min-height: 250px;
+}
+
+.card-flexbox {
+    /* Modelo de Cajas */
+    width: 250px;
+    padding: 20px; /* Espacio interno */
+    border: 3px solid #007bff; /* Borde visible */
+    margin: 15px; /* Espacio externo entre tarjetas y contenedor */
+    
+    /* Estilo adicional */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+/* 7. DASHBOARD LAYOUT - CSS Específico (Actualizado con Referencia) */
+.dashboard-layout {
+    display: grid;
+    /* Grid: dos columnas, sidebar de 250px y contenido flexible */
+    grid-template-columns: 250px 1fr; 
+    min-height: 100vh;
+}
+
+.sidebar {
+    /* Color de la referencia: Azul oscuro */
+    background-color: #1A385A; 
+    color: white;
+    padding: 20px;
+    /* Aplicamos Modelo de Cajas: margen inferior */
+    margin-bottom: 0;
+}
+
+.sidebar h3, .sidebar p {
+    margin-bottom: 20px;
+}
+
+.sidebar a {
+    color: #ffcc00; /* Color de acento */
+    text-decoration: none;
+    display: block;
+    padding: 8px 0;
+    font-size: 1em;
+}
+/* Estilos para el perfil en el sidebar */
+.profile-info {
+    text-align: center;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+.profile-info .avatar {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #1A385A;
+}
+
+.main-content {
+    /* Color de fondo más claro */
+    background-color: #F8F9FA; 
+    padding: 20px;
+}
+
+.stat-cards {
+    display: flex; /* Flexbox para organizar las tarjetas de estadísticas */
+    gap: 20px;
+    flex-wrap: wrap;
+    margin-top: 0;
+}
+
+.stat-card {
+    /* Flex: Distribución uniforme (similar a la imagen, 4 tarjetas) */
+    flex: 1 1 200px; 
+    max-width: calc(25% - 15px); /* Ajuste para que quepan 4 en una fila */
+    
+    /* Modelo de Cajas */
+    border: none; 
+    padding: 20px; /* Espacio interno */
+    margin: 0; 
+    
+    /* Estilo adicional */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    text-align: left;
+}
+
+.stat-card h4 { 
+    color: #333; 
+    margin-top: 0; 
+    font-size: 0.9em; 
+    font-weight: normal;
+}
+.stat-card .value {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1A385A;
+}/* 7. DASHBOARD LAYOUT - CSS Específico */
+
+/* GRID: Estructura principal de dos columnas */
+.dashboard-layout {
+    display: grid;
+    /* Sidebar de 250px y contenido flexible (1fr) */
+    grid-template-columns: 250px 1fr; 
+    min-height: 100vh;
+}
+
+/* BARRA LATERAL (SIDEBAR) */
+.sidebar {
+    /* Modelo de Cajas: Padding */
+    padding: 20px;
+    /* Estilo: Azul oscuro de la referencia */
+    background-color: #1A385A; 
+    color: white;
+}
+
+/* Información de Perfil */
+.profile-info {
+    text-align: center;
+    padding-bottom: 20px;
+    /* Borde inferior para separar */
+    border-bottom: 1px solid rgba(255, 255, 255, 0.2);
+    margin-bottom: 20px;
+}
+.profile-info .avatar {
+    width: 60px;
+    height: 60px;
+    background-color: white;
+    border-radius: 50%;
+    margin: 0 auto 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 30px;
+    color: #1A385A;
+}
+
+/* Enlaces del Sidebar */
+.sidebar a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 8px 10px;
+    font-size: 1em;
+    /* Modelo de Cajas: Margen entre elementos */
+    margin-bottom: 5px; 
+    border-radius: 4px;
+}
+.sidebar a:hover {
+    background-color: #2c4e72;
+}
+
+/* Enlace de regreso al índice, ajustado */
+.sidebar .back-link {
+    color: #ffcc00 !important; 
+    margin-top: 30px; 
+    font-size: 0.9em;
+}
+
+/* CONTENIDO PRINCIPAL */
+.main-content {
+    /* Estilo: Fondo claro de la referencia */
+    background-color: #F8F9FA; 
+    /* Modelo de Cajas: Padding */
+    padding: 20px;
+}
+
+/* FLEXBOX: Contenedor para las tarjetas de estadísticas */
+.stat-cards {
+    display: flex; 
+    gap: 20px; /* Espacio entre las tarjetas */
+    flex-wrap: wrap;
+    margin-top: 20px;
+}
+
+/* TARJETAS INDIVIDUALES */
+.stat-card {
+    /* Flex: Permite que haya 4 en una fila */
+    flex: 1 1 200px; 
+    max-width: calc(25% - 15px); /* Ajuste para 4 columnas */
+    
+    /* Modelo de Cajas: Padding interno y Margen (gap) */
+    padding: 20px; 
+    margin: 0; 
+    
+    /* Estilo */
+    background-color: white;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.08); /* Sombra suave */
+    text-align: left;
+}
+
+.stat-card h4 { 
+    color: #777; 
+    margin-top: 0; 
+    font-size: 0.9em; 
+    font-weight: normal;
+}
+.stat-card .value {
+    font-size: 1.8em;
+    font-weight: bold;
+    color: #1A385A;
+}
